@@ -10,9 +10,9 @@ export default class reactNativeIntro extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
+        <View style={styles.box}>
+          <Text style={styles.boxText}>1</Text>
+        </View>
       </View>
     );
   }
@@ -25,9 +25,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  box: {
+    width: 50,
+    height: 50,
+    backgroundColor: '#6c1d5f',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  boxText: {
+    color: 'white',
   },
 });
