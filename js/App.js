@@ -33,20 +33,12 @@ export default class reactNativeIntro extends Component {
     return (
       <View style={styles.root}>
         <View style={styles.container}>
-          <View style={[styles.box, {flex: 2}]}>
-            <Text style={styles.boxText}>1</Text>
-          </View>
-          <View style={[styles.box, {flex: 1}]}>
-            <Text style={styles.boxText}>2</Text>
-          </View>
-          <View style={[styles.box, {flex: 9}]}>
-            <Text style={styles.boxText}>3</Text>
-          </View>
+          <Button style={{flex: 2}}>1</Button>
+          <Button style={{flex: 1}}>2</Button>
+          <Button style={{flex: 9}}>3</Button>
         </View>
         <View style={styles.container}>
-          <View style={[styles.box, {flex: 3}]}>
-            <Text style={styles.boxText}>4</Text>
-          </View>
+          <Button style={{flex: 3}}>4</Button>
           <Button
             style={{flex: 4}}
             onPress={() => this.buttonPress()}>5</Button>
