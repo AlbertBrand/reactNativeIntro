@@ -9,8 +9,9 @@ import Button from './Button';
 describe('Button', () => {
   const text = "Hello";
   const onPress = () => {};
+  const style = {};
   const wrapper = shallow(
-    <Button onPress={onPress}>{text}</Button>
+    <Button onPress={onPress} style={style}>{text}</Button>
   );
 
   it('renders a text', () => {
@@ -23,5 +24,9 @@ describe('Button', () => {
 
   it('passes the onPress function', () => {
     wrapper.find(TouchableHighlight).props().onPress.should.equal(onPress);
+  });
+
+  it('contains the styles provided', () => {
+    wrapper.props().style.should.contain(style);
   });
 });
