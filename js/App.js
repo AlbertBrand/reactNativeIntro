@@ -10,13 +10,13 @@ export default class reactNativeIntro extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, {flex: 1}]}>
+        <View style={[styles.box, {flex: 2}]}>
           <Text style={styles.boxText}>1</Text>
         </View>
         <View style={[styles.box, {flex: 1}]}>
           <Text style={styles.boxText}>2</Text>
         </View>
-        <View style={[styles.box, {flex: 1}]}>
+        <View style={[styles.box, {flex: 9}]}>
           <Text style={styles.boxText}>3</Text>
         </View>
         <View style={[styles.box, {flex: 1}]}>
