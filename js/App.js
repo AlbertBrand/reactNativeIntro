@@ -7,6 +7,27 @@ import {
   View,
 } from 'react-native';
 
+class Button extends Component {
+  props: {
+    style?: Object,
+    onPress?: () => void,
+    children?: Object,
+  };
+
+  render() {
+    return (
+      <View style={[styles.box, this.props.style]}>
+        <TouchableHighlight
+          style={styles.highlight}
+          underlayColor="rgba(0.5, 0.5, 0.5, 0.1)"
+          onPress={this.props.onPress}>
+          <Text style={styles.boxText}>{this.props.children}</Text>
+        </TouchableHighlight>
+      </View>
+    );
+  }
+}
+
 export default class reactNativeIntro extends Component {
   render() {
     return (
@@ -26,14 +47,9 @@ export default class reactNativeIntro extends Component {
           <View style={[styles.box, {flex: 3}]}>
             <Text style={styles.boxText}>4</Text>
           </View>
-          <View style={[styles.box, {flex: 4}]}>
-            <TouchableHighlight
-              style={styles.highlight}
-              underlayColor="rgba(0.5, 0.5, 0.5, 0.1)"
-              onPress={() => this.buttonPress()}>
-              <Text style={styles.boxText}>5</Text>
-            </TouchableHighlight>
-          </View>
+          <Button
+            style={{flex: 4}}
+            onPress={() => this.buttonPress()}>5</Button>
         </View>
       </View>
     );
