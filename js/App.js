@@ -28,7 +28,7 @@ class Button extends Component {
   }
 }
 
-export default class reactNativeIntro extends Component {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.root}>
