@@ -16,7 +16,7 @@ export default class reactNativeIntro extends Component {
         <View style={styles.box}>
           <Text style={styles.boxText}>2</Text>
         </View>
-        <View style={styles.box}>
+        <View style={[styles.box, {width:320, backgroundColor: 'green'}]}>
           <Text style={styles.boxText}>3</Text>
         </View>
       </View>
