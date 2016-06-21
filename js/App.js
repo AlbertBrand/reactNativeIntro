@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
+  TouchableHighlight,
   View,
 } from 'react-native';
 
@@ -26,11 +27,19 @@ export default class reactNativeIntro extends Component {
             <Text style={styles.boxText}>4</Text>
           </View>
           <View style={[styles.box, {flex: 4}]}>
-            <Text style={styles.boxText}>5</Text>
+            <TouchableHighlight
+              style={styles.highlight}
+              underlayColor="rgba(0.5, 0.5, 0.5, 0.1)"
+              onPress={() => this.buttonPress()}>
+              <Text style={styles.boxText}>5</Text>
+            </TouchableHighlight>
           </View>
         </View>
       </View>
     );
+  }
+
+  buttonPress() {
   }
 }
 
@@ -49,9 +58,12 @@ const styles = StyleSheet.create({
   box: {
     height: 50,
     backgroundColor: '#6c1d5f',
+    margin: SPACING/2,
+  },
+  highlight: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    margin: SPACING/2,
   },
   boxText: {
     color: 'white',
