@@ -10,14 +10,20 @@ export default class reactNativeIntro extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.box}>
+        <View style={[styles.box, {flex: 1}]}>
           <Text style={styles.boxText}>1</Text>
         </View>
-        <View style={styles.box}>
+        <View style={[styles.box, {flex: 1}]}>
           <Text style={styles.boxText}>2</Text>
         </View>
-        <View style={[styles.box, {width:320, backgroundColor: 'green'}]}>
+        <View style={[styles.box, {flex: 1}]}>
           <Text style={styles.boxText}>3</Text>
+        </View>
+        <View style={[styles.box, {flex: 1}]}>
+          <Text style={styles.boxText}>4</Text>
+        </View>
+        <View style={[styles.box, {flex: 1}]}>
+          <Text style={styles.boxText}>5</Text>
         </View>
       </View>
     );
@@ -27,14 +33,11 @@ export default class reactNativeIntro extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexWrap: 'wrap',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     marginTop: 20,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#def',
   },
   box: {
-    width: 50,
     height: 50,
     backgroundColor: '#6c1d5f',
     justifyContent: 'center',
