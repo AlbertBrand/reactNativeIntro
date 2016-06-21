@@ -13,6 +13,12 @@ export default class reactNativeIntro extends Component {
         <View style={styles.box}>
           <Text style={styles.boxText}>1</Text>
         </View>
+        <View style={styles.box}>
+          <Text style={styles.boxText}>2</Text>
+        </View>
+        <View style={styles.box}>
+          <Text style={styles.boxText}>3</Text>
+        </View>
       </View>
     );
   }
@@ -21,8 +27,7 @@ export default class reactNativeIntro extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginTop: 20,
     backgroundColor: '#F5FCFF',
   },
   box: {
@@ -31,6 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#6c1d5f',
     justifyContent: 'center',
     alignItems: 'center',
+    margin: 10,
   },
   boxText: {
     color: 'white',
