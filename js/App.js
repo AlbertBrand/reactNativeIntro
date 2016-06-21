@@ -27,6 +27,7 @@ export default class reactNativeIntro extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 20,
