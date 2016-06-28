@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
 import {
+  Alert,
   StyleSheet,
   View,
 } from 'react-native';
@@ -19,13 +20,17 @@ export default class App extends Component {
           <Button style={[styles.button, {flex: 3}]}>4</Button>
           <Button
             style={[styles.button, {flex: 4}]}
-            onPress={() => this.buttonPress()}>5</Button>
+            onPress={() => this.buttonPress(5)}>5</Button>
         </View>
       </View>
     );
   }
 
-  buttonPress() {
+  buttonPress(number: number) {
+    Alert.alert(
+      'Button clicked',
+      `You have clicked on button number ${number}`
+    );
   }
 }
 
