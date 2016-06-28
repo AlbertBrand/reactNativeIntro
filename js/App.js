@@ -7,6 +7,16 @@ import {
 } from 'react-native';
 import Button from './Button';
 
+type Quote = {
+  quote: string,
+  author: string,
+};
+type Result = {
+  contents: {
+    quotes: Array<Quote>
+  }
+};
+
 export default class App extends Component {
   render() {
     return (
@@ -20,16 +30,19 @@ export default class App extends Component {
           <Button style={[styles.button, {flex: 3}]}>4</Button>
           <Button
             style={[styles.button, {flex: 4}]}
-            onPress={() => this.buttonPress(5)}>5</Button>
+            onPress={() => this.buttonPress()}>Show me a quote!</Button>
         </View>
       </View>
     );
   }
 
-  buttonPress(number: number) {
+  async buttonPress() {
+    const result = await fetch('http://quotes.rest/qod.json');
+    const json:Result = await result.json();
+    const item = json.contents.quotes[0];
     Alert.alert(
-      'Button clicked',
-      `You have clicked on button number ${number}`
+      'Quote of the day',
+      `${item.quote}  -${item.author}`
     );
   }
 }
