@@ -6,6 +6,7 @@ import {
   View,
 } from 'react-native';
 import Button from './Button';
+import List from './List';
 
 type Quote = {
   quote: string,
@@ -32,6 +33,7 @@ export default class App extends Component {
             style={[styles.button, {flex: 4}]}
             onPress={() => this.buttonPress()}>Show me a quote!</Button>
         </View>
+        <List styles={{flex: 1}}/>
       </View>
     );
   }
